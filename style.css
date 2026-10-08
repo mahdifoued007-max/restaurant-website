@@ -337,3 +337,94 @@ footer {
         max-width: 250px;
     }
 }
+/* Delivery Section */
+.delivery {
+    padding: 100px 20px;
+    background: white;
+    text-align: center;
+}
+
+.delivery h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.delivery-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.delivery-btn {
+    display: inline-block;
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s;
+    color: white;
+}
+
+.delivery-btn.glovo {
+    background: #00a082;
+}
+
+.delivery-btn.uber {
+    background: #06c167;
+}
+
+.delivery-btn.bolt {
+    background: #34d186;
+}
+
+.delivery-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #d4af37;
+    color: #1a1a1a;
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 999;
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

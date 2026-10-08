@@ -35,8 +35,7 @@
             <a href="#menu" class="btn btn-primary">View Our Menu</a>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=600&h=600&fit=crop" alt="Our Chef">
-        </div>
+<img src="chef.jpg" alt="Our Chef">        </div>
     </div>
 </header>
 <!-- About Section -->
@@ -135,13 +134,61 @@
             </div>
         </div>
     </section>
-
+<!-- Delivery Section -->
+<section id="delivery" class="delivery">
+    <div class="container">
+        <h2>Order Online</h2>
+        <p class="section-subtitle">Get your favorite dishes delivered to your door</p>
+        <div class="delivery-buttons">
+            <a href="https://glovoapp.com" target="_blank" class="delivery-btn glovo">
+                🛵 Order on Glovo
+            </a>
+            <a href="https://www.ubereats.com" target="_blank" class="delivery-btn uber">
+                🚗 Order on Uber Eats
+            </a>
+            <a href="https://www.bolt.eu" target="_blank" class="delivery-btn bolt">
+                ⚡ Order on Bolt Food
+            </a>
+        </div>
+    </div>
+</section>
     <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2026 La Bella Cucina. All rights reserved.</p>
         </div>
     </footer>
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" onclick="scrollToTop()">↑</button>
 
+<script>
+    // Back to top button
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('backToTop');
+        if (window.scrollY > 300) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
+    });
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.menu-item, .gallery-grid img, .about-grid, .contact-grid').forEach(el => {
+        el.classList.add('reveal');
+        observer.observe(el);
+    });
+</script>
 </body>
 </html>
